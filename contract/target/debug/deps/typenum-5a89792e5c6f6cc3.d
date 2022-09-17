@@ -1,0 +1,18 @@
+/mnt/d/Documents/chich_virus/source/game-contract/contract/target/debug/deps/typenum-5a89792e5c6f6cc3.rmeta: /home/mibi/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/lib.rs /home/mibi/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/bit.rs /home/mibi/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/int.rs /home/mibi/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/marker_traits.rs /home/mibi/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/operator_aliases.rs /home/mibi/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/private.rs /home/mibi/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/type_operators.rs /home/mibi/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/uint.rs /home/mibi/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/array.rs /mnt/d/Documents/chich_virus/source/game-contract/contract/target/debug/build/typenum-b2006391cb8436f4/out/op.rs /mnt/d/Documents/chich_virus/source/game-contract/contract/target/debug/build/typenum-b2006391cb8436f4/out/consts.rs
+
+/mnt/d/Documents/chich_virus/source/game-contract/contract/target/debug/deps/typenum-5a89792e5c6f6cc3.d: /home/mibi/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/lib.rs /home/mibi/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/bit.rs /home/mibi/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/int.rs /home/mibi/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/marker_traits.rs /home/mibi/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/operator_aliases.rs /home/mibi/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/private.rs /home/mibi/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/type_operators.rs /home/mibi/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/uint.rs /home/mibi/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/array.rs /mnt/d/Documents/chich_virus/source/game-contract/contract/target/debug/build/typenum-b2006391cb8436f4/out/op.rs /mnt/d/Documents/chich_virus/source/game-contract/contract/target/debug/build/typenum-b2006391cb8436f4/out/consts.rs
+
+/home/mibi/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/lib.rs:
+/home/mibi/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/bit.rs:
+/home/mibi/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/int.rs:
+/home/mibi/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/marker_traits.rs:
+/home/mibi/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/operator_aliases.rs:
+/home/mibi/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/private.rs:
+/home/mibi/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/type_operators.rs:
+/home/mibi/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/uint.rs:
+/home/mibi/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/array.rs:
+/mnt/d/Documents/chich_virus/source/game-contract/contract/target/debug/build/typenum-b2006391cb8436f4/out/op.rs:
+/mnt/d/Documents/chich_virus/source/game-contract/contract/target/debug/build/typenum-b2006391cb8436f4/out/consts.rs:
+
+# env-dep:TYPENUM_BUILD_CONSTS=/mnt/d/Documents/chich_virus/source/game-contract/contract/target/debug/build/typenum-b2006391cb8436f4/out/consts.rs
+# env-dep:TYPENUM_BUILD_OP=/mnt/d/Documents/chich_virus/source/game-contract/contract/target/debug/build/typenum-b2006391cb8436f4/out/op.rs
