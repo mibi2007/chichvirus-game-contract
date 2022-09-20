@@ -217,7 +217,7 @@ mod tests {
         let mut context = get_context(false);
         let alice: AccountId = accounts(0);
         let bob: AccountId = accounts(1);
-        let charlie: AccountId = accounts(1);
+        let charlie: AccountId = accounts(2);
 
         context
             .account_balance(1000)
@@ -245,7 +245,7 @@ mod tests {
                 status: GameStatus::Done,
                 balance: 100,
                 end_ts: Some(end_time),
-                winner: Some(charlie.clone()), // Should not pass
+                winner: Some(bob.clone()), // Should not pass
             })
         )
     }

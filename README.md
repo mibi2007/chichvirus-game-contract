@@ -17,16 +17,16 @@ cargo test & build.sh
 3. Deploy and init contract
 
 ```
-near deploy --wasmFile out/contract.wasm --accountId $CONTRACT_ID--initFunction new '{"owner_id": "$ACCOUNT_ID"}'
+near deploy --wasmFile out/contract.wasm --accountId $CONTRACT_ID --initFunction new --initArgs '{"owner_id": "mibi.testnet"}'
 ```
 
 4. Save math result
 
 ```
-near call $CONTRACT_ID match_result '{"match_id": "match_1", "win": "user_1", "lose": "user_2"}' --accountId $ACCOUNT_ID --deposit 1
+near call $CONTRACT_ID create_game_match '{"match_id": "match_1", "players": ["user_1", "user_2"], "balance": 100, "start_ts": 1663619726000000}' --accountId $ACCOUNT_ID --deposit 1
 ```
 
-5. Get order
+5. Get match
 
 ```
 near view $CONTRACT_ID get_match '{"match_id": "match_1"}'
