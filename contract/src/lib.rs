@@ -100,6 +100,10 @@ impl Contract {
         current_match.status = GameStatus::Done;
         current_match.winner = Some(winner.clone());
         current_match.end_ts = Some(end_ts);
+
+        // Replace the current match with new information
+        self.matches.insert(&match_id, &current_match);
+
         Some(current_match)
     }
 }
@@ -146,7 +150,7 @@ mod tests {
     }
 
     #[test]
-    fn get_matches() {
+    fn test_get_matches() {
         let mut context = get_context(false);
         let alice: AccountId = accounts(0);
 
@@ -229,7 +233,6 @@ mod tests {
 
         let mut contract = Contract::new(alice.clone());
         let start_time = block_timestamp();
-        let end_time = block_timestamp();
         contract.create_game_match(
             "match_1".to_owned(),
             (bob.clone(), charlie.clone()),
@@ -237,16 +240,10 @@ mod tests {
             start_time,
         );
 
-        assert_eq!(
-            contract.save_match_result("match_1".to_owned(), bob.clone(), end_time),
-            Some(GameMatch {
-                players: (bob.clone(), charlie.clone()),
-                start_ts: start_time,
-                status: GameStatus::Done,
-                balance: 100,
-                end_ts: Some(end_time),
-                winner: Some(bob.clone()), // Should not pass
-            })
-        )
+        let end_time = block_timestamp() + 1_000 * 60; // After 60 seconds
+        contract.save_match_result("match_1".to_owned(), bob.clone(), end_time);
+
+        let current_match = contract.get_matches("match_1".to_string()).unwrap();
+        assert_eq!(current_match.winner, Some(bob.clone()));
     }
 }
