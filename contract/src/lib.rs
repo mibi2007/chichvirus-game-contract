@@ -65,10 +65,10 @@ impl Contract {
         start_ts: Timestamp,
     ) -> Option<GameMatch> {
         if self.player_init_game.get(&players.0).is_some() {
-            panic!("player_1 already in game");
+            panic!("{} already in game", &players.0);
         }
         if self.player_init_game.get(&players.1).is_some() {
-            panic!("player_2 already in game");
+            panic!("{} already in game", &players.1);
         }
         let new_game = GameMatch {
             players: players.clone(),
