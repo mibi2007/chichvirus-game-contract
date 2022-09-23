@@ -23,7 +23,7 @@ near deploy --wasmFile out/contract.wasm --accountId $CONTRACT_ID --initFunction
 4. Save math result
 
 ```
-near call $CONTRACT_ID create_game_match '{"match_id": "match_1", "players": ["user_1", "user_2"], "balance": 100, "start_ts": 1663619726000000}' --accountId $ACCOUNT_ID --deposit 1
+near call $CONTRACT_ID create_game_match '{"match_id": "match_1", "players": ["user_1", "user_2"], "balance": 100, "start_ts": 1663619726000000}' --accountId $ACCOUNT_ID
 ```
 
 5. Get match

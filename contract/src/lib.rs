@@ -49,17 +49,12 @@ impl Contract {
         }
     }
 
-    // Public method - returns the greeting saved, defaulting to DEFAULT_MESSAGE
-    pub fn get_matches(&self, match_id: String) -> Option<GameMatch> {
+    pub fn get_match(&self, match_id: String) -> Option<GameMatch> {
         return self.matches.get(&match_id);
     }
 
-    pub fn get_players_matches(&self) -> String {
-        return format!(
-            "games: {:?}",
-            self.player_init_game
-                .get(&"choptr.testnet".parse().unwrap())
-        );
+    pub fn get_players_matches(&self, player: AccountId) -> Option<MatchId> {
+        return self.player_init_game.get(&player);
     }
 
     pub fn create_game_match(
@@ -103,6 +98,10 @@ impl Contract {
 
         // Replace the current match with new information
         self.matches.insert(&match_id, &current_match);
+
+        // Delete player_init_game for players
+        self.player_init_game.remove(&current_match.players.0);
+        self.player_init_game.remove(&current_match.players.1);
 
         Some(current_match)
     }
@@ -150,7 +149,7 @@ mod tests {
     }
 
     #[test]
-    fn test_get_matches() {
+    fn test_get_match() {
         let mut context = get_context(false);
         let alice: AccountId = accounts(0);
 
@@ -169,7 +168,7 @@ mod tests {
             player_init_game: LookupMap::new(StorageKey::MatchKey),
         };
         assert_eq!(
-            contract.get_matches("123456".to_string()),
+            contract.get_match("123456".to_string()),
             Some(GameMatch {
                 players: (accounts(0), accounts(1)),
                 start_ts: block_timestamp(),
@@ -243,7 +242,10 @@ mod tests {
         let end_time = block_timestamp() + 1_000 * 60; // After 60 seconds
         contract.save_match_result("match_1".to_owned(), bob.clone(), end_time);
 
-        let current_match = contract.get_matches("match_1".to_string()).unwrap();
+        let current_match = contract.get_match("match_1".to_string()).unwrap();
         assert_eq!(current_match.winner, Some(bob.clone()));
+
+        assert_eq!(contract.player_init_game.get(&bob), None);
+        assert_eq!(contract.player_init_game.get(&charlie), None);
     }
 }
