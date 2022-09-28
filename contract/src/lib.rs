@@ -116,7 +116,7 @@ mod tests {
     use near_sdk::{
         env::block_timestamp,
         test_utils::{accounts, VMContextBuilder},
-        testing_env, Gas, VMContext,
+        testing_env,
     };
 
     use super::*;

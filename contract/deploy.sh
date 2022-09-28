@@ -1,5 +1,6 @@
 #!/bin/sh
-
+export CONTRACT_ID=chichvirus-contract.mibi.testnet
+export ACCOUNT_ID=mibi.testnet
 ./build.sh
 
 if [ $? -ne 0 ]; then
